@@ -12,13 +12,52 @@ export const Contact = () => {
     message: ''
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  // const handleSubmit = (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   toast({
+  //     title: "Message Sent!",
+  //     description: "Thank you for your message. I'll get back to you within 24 hours.",
+  //   });
+  //   setFormData({ name: '', email: '', subject: '', message: '' });
+  // };
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for your message. I'll get back to you within 24 hours.",
-    });
-    setFormData({ name: '', email: '', subject: '', message: '' });
+
+    try {
+      const response = await fetch("https://formspree.io/f/xrbkrppj", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        }),
+      });
+
+      if (response.ok) {
+        toast({
+          title: "Message Sent!",
+          description: "Thank you for your message. I'll get back to you within 24 hours.",
+        });
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      } else {
+        toast({
+          title: "Error",
+          description: "Something went wrong. Please try again.",
+          variant: "destructive",
+        });
+      }
+    } catch (error) {
+      toast({
+        title: "Network Error",
+        description: "Please check your internet connection and try again.",
+        variant: "destructive",
+      });
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -37,12 +76,12 @@ export const Contact = () => {
             Ready to start your mathematics journey? I'd love to hear from you and discuss how I can help you achieve your goals.
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Information */}
           <div>
             <h3 className="text-2xl font-bold text-gray-900 mb-8">Let's Connect</h3>
-            
+
             <div className="space-y-6">
               <div className="flex items-start">
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
@@ -50,22 +89,22 @@ export const Contact = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-1">Email</h4>
-                  <p className="text-gray-600">george.ziaziaris@email.com</p>
+                  <p className="text-gray-600">geoziaziaris@gmail.com</p>
                   <p className="text-sm text-gray-500">I typically respond within 24 hours</p>
                 </div>
               </div>
-              
+
               <div className="flex items-start">
                 <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
                   <Phone className="w-6 h-6 text-green-600" />
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-1">Phone</h4>
-                  <p className="text-gray-600">+1 (555) 123-4567</p>
+                  <p className="text-gray-600">+30 (698) 288-1164</p>
                   <p className="text-sm text-gray-500">Call or text for quick questions</p>
                 </div>
               </div>
-              
+
               <div className="flex items-start">
                 <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
                   <Clock className="w-6 h-6 text-purple-600" />
@@ -76,7 +115,7 @@ export const Contact = () => {
                   <p className="text-sm text-gray-500">Flexible scheduling to fit your needs</p>
                 </div>
               </div>
-              
+
               <div className="flex items-start">
                 <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
                   <MapPin className="w-6 h-6 text-orange-600" />
@@ -85,15 +124,17 @@ export const Contact = () => {
                   <h4 className="font-semibold text-gray-900 mb-1">Location</h4>
                   <p className="text-gray-600">Online & In-Person</p>
                   <p className="text-sm text-gray-500">Serving students worldwide via video calls</p>
+                  <p className="text-sm text-gray-500">Μυστρά 54, Γλυφάδα 165 61 </p>
+
                 </div>
               </div>
             </div>
           </div>
-          
+
           {/* Contact Form */}
           <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-gray-900 mb-6">Send Me a Message</h3>
-            
+
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
@@ -110,7 +151,7 @@ export const Contact = () => {
                   placeholder="Your full name"
                 />
               </div>
-              
+
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                   Email Address
@@ -126,7 +167,7 @@ export const Contact = () => {
                   placeholder="your@email.com"
                 />
               </div>
-              
+
               <div>
                 <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
                   Subject
@@ -146,7 +187,7 @@ export const Contact = () => {
                   <option value="general">General Inquiry</option>
                 </select>
               </div>
-              
+
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                   Message
@@ -162,7 +203,7 @@ export const Contact = () => {
                   placeholder="Tell me about your math goals and how I can help you..."
                 />
               </div>
-              
+
               <button
                 type="submit"
                 className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 flex items-center justify-center"
