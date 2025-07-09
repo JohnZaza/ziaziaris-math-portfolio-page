@@ -1,0 +1,159 @@
+{
+    "about": {
+        "title": "About Me",
+        "description": "Dedicated to transforming how students perceive and excel in mathematics",
+        "philosophyTitle": "My Teaching Philosophy",
+        "philosophyParagraph1": "I believe that every student has the potential to excel in mathematics. My approach focuses on building a strong foundation, developing problem-solving skills, and fostering a genuine appreciation for the beauty and logic of mathematical concepts.",
+        "philosophyParagraph2": "Through personalized instruction, real-world applications, and patient guidance, I help students overcome their fears and build the confidence they need to succeed not just in mathematics, but in all areas of their academic journey.",
+        "points": {
+            "degree": "Master's in Mathematics",
+            "results": "Results-Oriented",
+            "passion": "Passionate Teacher",
+            "methods": "Proven Methods"
+        },
+        "differenceTitle": "What Makes Me Different",
+        "bullets": {
+            "personalized": {
+                "title": "Personalized Approach",
+                "desc": "Tailored lessons that adapt to each student's learning style and pace."
+            },
+            "realworld": {
+                "title": "Real-World Connections",
+                "desc": "Making math relevant through practical applications and examples."
+            },
+            "confidence": {
+                "title": "Confidence Building",
+                "desc": "Creating a supportive environment where students feel safe to make mistakes and learn."
+            },
+            "support": {
+                "title": "Continuous Support",
+                "desc": "Available for questions and guidance beyond regular session times."
+            }
+        }
+    },
+    "contact": {
+        "title": "Get In Touch",
+        "description": "Ready to start your mathematics journey? I'd love to hear from you and discuss how I can help you achieve your goals!",
+        "connectTitle": "Let's Connect",
+        "email": {
+            "title": "Email",
+            "note": "I typically respond within 24 hours"
+        },
+        "phone": {
+            "title": "Phone",
+            "note": "Call or text for quick questions"
+        },
+        "availability": {
+            "title": "Availability",
+            "days": "Monday - Saturday",
+            "note": "Flexible scheduling to fit your needs"
+        },
+        "location": {
+            "title": "Location",
+            "mode": "Online & In-Person",
+            "note": "Serving students worldwide via video calls"
+        },
+        "form": {
+            "title": "Send Me a Message",
+            "name": "Full Name",
+            "namePlaceholder": "Your full name",
+            "email": "Email Address",
+            "emailPlaceholder": "your@email.com",
+            "subject": "Subject",
+            "selectSubject": "Select a subject",
+            "subjects": {
+                "tutoring": "Individual Tutoring",
+                "group": "Group Sessions",
+                "exam": "Exam Preparation",
+                "general": "General Inquiry"
+            },
+            "message": "Message",
+            "messagePlaceholder": "Tell me about your math goals and how I can help you...",
+            "sendButton": "Send Message"
+        },
+        "toast": {
+            "success": {
+                "title": "Message Sent!",
+                "description": "Thank you for your message. I'll get back to you within 24 hours."
+            },
+            "error": {
+                "title": "Error",
+                "description": "Something went wrong. Please try again."
+            },
+            "network": {
+                "title": "Network Error",
+                "description": "Please check your internet connection and try again."
+            }
+        }
+    },
+    "hero": {
+        "name": "George P. Ziaziaris",
+        "title": "Mathematics Tutor",
+        "description": "Passionate about making mathematics accessible and enjoyable for every student. With years of teaching experience, I help students build confidence and achieve their academic goals through personalized instruction and proven methods.",
+        "cta": "Get Started Today",
+        "learnMore": "Learn More",
+        "stats": {
+            "students": "Students Taught",
+            "success": "Success Rate",
+            "experience": "Years Experience"
+        }
+    },
+    "navbar": {
+        "name": "George P. Ziaziaris"
+    },
+    "nav": {
+        "home": "Home",
+        "about": "About",
+        "services": "Services",
+        "contact": "Contact"
+    },
+    "services": {
+        "title": "My Services",
+        "description": "Comprehensive mathematics education tailored to help you achieve your academic goals",
+        "oneOnOne": {
+            "title": "One-on-One Tutoring",
+            "description": "Personalized mathematics instruction tailored to your specific needs and learning style.",
+            "features": [
+                "Customized lesson plans",
+                "Flexible scheduling",
+                "Progress tracking",
+                "Homework support"
+            ]
+        },
+        "group": {
+            "title": "Small Group Sessions",
+            "description": "Collaborative learning environment with 2–4 students for peer interaction and support.",
+            "features": [
+                "Interactive discussions",
+                "Peer learning",
+                "Cost-effective",
+                "Group problem solving"
+            ]
+        },
+        "exam": {
+            "title": "Exam Preparation",
+            "description": "Comprehensive preparation for standardized tests, final exams, and entrance examinations.",
+            "features": [
+                "Practice tests",
+                "Strategy development",
+                "Time management",
+                "Confidence building"
+            ]
+        },
+        "mastery": {
+            "title": "Concept Mastery",
+            "description": "Deep understanding of mathematical concepts from basic arithmetic to advanced calculus.",
+            "features": [
+                "Foundation building",
+                "Advanced topics",
+                "Real-world applications",
+                "Critical thinking"
+            ]
+        },
+        "cta": {
+            "title": "Ready to Start Your Math Journey?",
+            "description": "Don't let mathematics hold you back. Whether you're struggling with basics or aiming for advanced concepts, I'm here to guide you every step of the way.",
+            "button": "Schedule Your First Session"
+        }
+    }
+}
