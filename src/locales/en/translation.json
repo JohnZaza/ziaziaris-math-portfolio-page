@@ -105,7 +105,8 @@
         "home": "Home",
         "about": "About",
         "services": "Services",
-        "contact": "Contact"
+        "contact": "Contact",
+        "exams": "Exams"
     },
     "services": {
         "title": "My Services",
@@ -154,6 +155,18 @@
             "title": "Ready to Start Your Math Journey?",
             "description": "Don't let mathematics hold you back. Whether you're struggling with basics or aiming for advanced concepts, I'm here to guide you every step of the way.",
             "button": "Schedule Your First Session"
+        }
+    },
+    "exams": {
+        "title": "Downloadable Exams",
+        "exam": "Exam",
+        "grades": {
+            "gymA": "Grade 7",
+            "gymB": "Grade 8",
+            "gymC": "Grade 9",
+            "lykA": "Grade 10",
+            "lykB": "Grade 11",
+            "lykC": "Grade 12"
         }
     }
 }
