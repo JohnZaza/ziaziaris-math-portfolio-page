@@ -67,8 +67,8 @@ export const Exams = () => {
                                         <li key={exam._id} className="flex items-center justify-between">
                                             <span className="text-gray-700">{exam.title}</span>
                                             <a
-                                                // href={exam.url}
-                                                href={`http://localhost:3001${exam.url}`}
+                                                // href={`http://localhost:3001${exam.url}`}
+                                                href={`https://ziaziaris-backend.onrender.com${exam.url}`}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
                                                 className="text-blue-600 hover:text-blue-800 transition-colors"
