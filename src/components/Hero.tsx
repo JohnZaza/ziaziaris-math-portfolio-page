@@ -89,7 +89,7 @@ export const Hero = () => {
           <div className="text-center">
             <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
               <Award className="w-8 h-8 text-green-600 mx-auto mb-4" />
-              <div className="text-3xl font-bold text-gray-900 mb-2">95%</div>
+              <div className="text-3xl font-bold text-gray-900 mb-2">98%</div>
               <div className="text-gray-600">{t("hero.stats.success")}</div>
             </div>
           </div>

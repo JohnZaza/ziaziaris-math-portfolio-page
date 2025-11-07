@@ -16,8 +16,13 @@ i18n
     .init({
         resources,
         fallbackLng: "en",
+        lng: "el",
         interpolation: {
             escapeValue: false,
+        },
+        detection: {
+            order: ["localStorage", "navigator", "htmlTag", "path", "subdomain"],
+            caches: ["localStorage"],
         },
     });
 
