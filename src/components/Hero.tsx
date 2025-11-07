@@ -1,6 +1,6 @@
 import { Calculator, BookOpen, Award } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import slide2 from "../assets/slide2.png";
+import logoGeo from "../assets/logoGeo.png"
 import bg from "../assets/bg.png";
 
 export const Hero = () => {
@@ -32,7 +32,7 @@ export const Hero = () => {
             {/* <div className="relative w-32 h-32 mx-auto bg-gradient-to-br from-white-500 to-indigo-600 rounded-full flex items-center justify-center">
               <img src={slide2} alt="Logo" />
             </div> */}
-            <div
+            {/* <div
               className="relative w-32 h-32 mx-auto bg-gradient-to-br from-white-500 to-indigo-600 rounded-full flex items-center justify-center group cursor-pointer transition-transform"
             >
               <img
@@ -40,7 +40,16 @@ export const Hero = () => {
                 alt="Logo"
                 className="rounded-full w-full h-full object-cover transition-transform duration-500 ease-out group-hover:animate-zoom-bounce"
               />
+            </div> */}
+            <div className="w-full flex justify-center items-center overflow-visible mb-10">
+              <img
+                src={logoGeo}
+                alt="Ziaziaris Math Logo"
+                className="max-w-[280px] w-full h-auto transition-transform duration-500 ease-out hover:scale-105 hover:brightness-110 drop-shadow-2xl"
+                style={{ objectFit: "contain" }}
+              />
             </div>
+
 
 
           </div>

@@ -144,7 +144,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import slide2 from "@/assets/slide2.png";
+import logoGeo from "../assets/logoGeo.png"
 import { motion } from "framer-motion";
 
 export const Navigation = () => {
@@ -186,13 +186,23 @@ export const Navigation = () => {
             className="flex items-center space-x-3 group cursor-pointer"
             onClick={() => scrollToSection("home")}
           >
-            <motion.img
-              src={slide2}
+            {/* <motion.img
+              src={logoGeo}
               alt="Logo"
               className="w-10 h-10 rounded-full object-cover ring-2 ring-blue-400 group-hover:ring-indigo-500"
               whileHover={{ rotate: 5 }}
               transition={{ type: "spring", stiffness: 300 }}
+            /> */}
+            <motion.img
+              src={logoGeo}
+              alt="Logo"
+              className="w-14 h-14 object-contain drop-shadow-lg group-hover:drop-shadow-2xl transition duration-500"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              whileHover={{ scale: 1.1, rotate: 2 }}
+              transition={{ type: "spring", stiffness: 200, damping: 15 }}
             />
+
             <motion.span
               className="font-extrabold text-xl text-blue-900 group-hover:text-indigo-600"
               initial={{ opacity: 0 }}
@@ -267,8 +277,8 @@ export const Navigation = () => {
                     key={lng}
                     onClick={() => changeLanguage(lng as "en" | "el")}
                     className={`text-sm px-3 py-1 rounded-full border ${i18n.language === lng
-                        ? "bg-blue-600 text-white"
-                        : "text-gray-700 border-gray-300 hover:border-blue-600 hover:text-blue-600"
+                      ? "bg-blue-600 text-white"
+                      : "text-gray-700 border-gray-300 hover:border-blue-600 hover:text-blue-600"
                       }`}
                   >
                     {lng.toUpperCase()}
