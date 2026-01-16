@@ -11,7 +11,8 @@ export const Contact = () => {
     name: '',
     email: '',
     subject: '',
-    message: ''
+    message: '',
+    gdprConsent: false
   });
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -32,7 +33,7 @@ export const Contact = () => {
           title: t("contact.toast.success.title"),
           description: t("contact.toast.success.description"),
         });
-        setFormData({ name: '', email: '', subject: '', message: '' });
+        setFormData({ name: '', email: '', subject: '', message: '', gdprConsent: false });
       } else {
         toast({
           title: t("contact.toast.error.title"),
@@ -50,9 +51,10 @@ export const Contact = () => {
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value, type } = e.target;
     setFormData(prev => ({
       ...prev,
-      [e.target.name]: e.target.value
+      [name]: type === 'checkbox' ? (e.target as HTMLInputElement).checked : value
     }));
   };
 
@@ -79,7 +81,7 @@ export const Contact = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-1">{t("contact.email.title")}</h4>
-                  <p className="text-gray-600">geoziaziaris@gmail.com</p>
+                  <a href="mailto:geoziaziaris@gmail.com" className="text-gray-600 hover:text-blue-600 transition-colors">geoziaziaris@gmail.com</a>
                   <p className="text-sm text-gray-500">{t("contact.email.note")}</p>
                 </div>
               </div>
@@ -91,7 +93,7 @@ export const Contact = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-1">{t("contact.phone.title")}</h4>
-                  <p className="text-gray-600">+30 (698) 288-1164</p>
+                  <a href="tel:+306982881164" className="text-gray-600 hover:text-blue-600 transition-colors">+30 (698) 288-1164</a>
                   <p className="text-sm text-gray-500">{t("contact.phone.note")}</p>
                 </div>
               </div>
@@ -117,7 +119,7 @@ export const Contact = () => {
                   <h4 className="font-semibold text-gray-900 mb-1">{t("contact.location.title")}</h4>
                   <p className="text-gray-600">{t("contact.location.mode")}</p>
                   <p className="text-sm text-gray-500">{t("contact.location.note")}</p>
-                  <p className="text-sm text-gray-500">Μυστρά 54, Γλυφάδα 165 61</p>
+                  <a href="https://www.google.com/maps/search/?api=1&query=Mystra+54,+Glyfada+165+61" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-500 hover:text-blue-600 transition-colors">Μυστρά 54, Γλυφάδα 165 61</a>
                 </div>
               </div>
             </div>
@@ -194,6 +196,25 @@ export const Contact = () => {
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
                   placeholder={t("contact.form.messagePlaceholder")}
                 />
+              </div>
+
+              <div className="flex items-start">
+                <div className="flex items-center h-5">
+                  <input
+                    id="gdprConsent"
+                    name="gdprConsent"
+                    type="checkbox"
+                    checked={formData.gdprConsent}
+                    onChange={handleChange}
+                    required
+                    className="focus:ring-blue-500 h-4 w-4 text-blue-600 border-gray-300 rounded"
+                  />
+                </div>
+                <div className="ml-3 text-sm">
+                  <label htmlFor="gdprConsent" className="font-medium text-gray-700">
+                    {t("contact.form.gdpr")}
+                  </label>
+                </div>
               </div>
 
               <button

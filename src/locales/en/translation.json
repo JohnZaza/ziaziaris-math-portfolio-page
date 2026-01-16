@@ -69,7 +69,8 @@
             },
             "message": "Message",
             "messagePlaceholder": "Tell me about your math goals and how I can help you...",
-            "sendButton": "Send Message"
+            "sendButton": "Send Message",
+            "gdpr": "I agree to the processing of my personal data according to the GDPR."
         },
         "toast": {
             "success": {
